@@ -1,0 +1,278 @@
+
+user@user--- MINGW64 ~/Documents/repository
+$ mkdir homework_BranchesAndConflicts
+
+user@user--- MINGW64 ~/Documents/repository
+$ cd homework_BranchesAndConflicts
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts
+$ git init
+Initialized empty Git repository in C:/Users/user/Documents/repository/homework_BranchesAndConflicts/.git/
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ touch README.md
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git commit -m "First commit. Add readme file"
+[master (root-commit) 919231b] First commit. Add readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ mkdir Cadr
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ mkdir Dialog
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git commit -m "Creaty folders 'Dialog' and 'Cadr'. Edit README file "
+[master 266d8f6] Creaty folders 'Dialog' and 'Cadr'. Edit README file
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Cadr/
+        Dialog/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Cadr/Cadr1.txt
+        new file:   Cadr/Cadr2.txt
+        new file:   Dialog/Dialog1.txt
+        new file:   Dialog/Dialog2.txt
+
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git commit -m "Creaty file Dialog1, Dialog2, Cadr1 and Cadr2"                 [master abbf9a4] Creaty file Dialog1, Dialog2, Cadr1 and Cadr2
+ 4 files changed, 27 insertions(+)
+ create mode 100644 Cadr/Cadr1.txt
+ create mode 100644 Cadr/Cadr2.txt
+ create mode 100644 Dialog/Dialog1.txt
+ create mode 100644 Dialog/Dialog2.txt
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git branch develop
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git branch --list
+  develop
+* master
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Cadr/Cadr2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git commit -m "Edit file Cadr2"
+[develop 0afcf88] Edit file Cadr2
+ 1 file changed, 1 insertion(+)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Dialog/Dialog1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git commit -m "Edit file Dialog2"
+[develop 3593321] Edit file Dialog2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git checkout master
+Switched to branch 'master'
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git commit -m "Edit file README"
+[master 7833800] Edit file README
+Merge made by the 'ort' strategy.
+ README.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git log --all --decorate --oneline --graph
+*   344094a (HEAD -> develop) Add comments are producer
+|\
+| * 7833800 (master) Edit file README
+* | 3593321 Edit file Dialog2
+* | 0afcf88 Edit file Cadr2
+|/
+* abbf9a4 Creaty file Dialog1, Dialog2, Cadr1 and Cadr2
+* 266d8f6 Creaty folders 'Dialog' and 'Cadr'. Edit README file
+* 919231b First commit. Add readme file
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Cadr/Cadr1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git commit -m "Edit file Cadr1 (where to get Dialog1)"
+[develop d46a4a2] Edit file Cadr1 (where to get Dialog1)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Cadr/Cadr2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git add .
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git commit -m "Edit file Cadr2 (where to get Dialog2) and video sequence changes"
+[develop abece21] Edit file Cadr2 (where to get Dialog2) and video sequence changes
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (develop)
+$ git checkout master
+Switched to branch 'master'
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git log --all --decorate --oneline --graph
+* abece21 (develop) Edit file Cadr2 (where to get Dialog2) and video sequence changes
+* d46a4a2 Edit file Cadr1 (where to get Dialog1)
+*   344094a Add comments are producer
+|\
+| * 7833800 (HEAD -> master) Edit file README
+* | 3593321 Edit file Dialog2
+* | 0afcf88 Edit file Cadr2
+|/
+* abbf9a4 Creaty file Dialog1, Dialog2, Cadr1 and Cadr2
+* 266d8f6 Creaty folders 'Dialog' and 'Cadr'. Edit README file
+* 919231b First commit. Add readme file
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git merge develop
+Updating 7833800..abece21
+Fast-forward
+ Cadr/Cadr1.txt     | 2 +-
+ Cadr/Cadr2.txt     | 5 +++--
+ Dialog/Dialog1.txt | 2 +-
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git commit -m "the final version"
+On branch master
+nothing to commit, working tree clean
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git log --all --decorate --oneline --graph
+* abece21 (HEAD -> master, develop) Edit file Cadr2 (where to get Dialog2) and video sequence changes
+* d46a4a2 Edit file Cadr1 (where to get Dialog1)
+*   344094a Add comments are producer
+|\
+| * 7833800 Edit file README
+* | 3593321 Edit file Dialog2
+* | 0afcf88 Edit file Cadr2
+|/
+* abbf9a4 Creaty file Dialog1, Dialog2, Cadr1 and Cadr2
+* 266d8f6 Creaty folders 'Dialog' and 'Cadr'. Edit README file
+* 919231b First commit. Add readme file
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git remote add origin https://github.com/DimKon3/homework_BranchesAndConflicts.git
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (master)
+$ git branch -M main
+
+user@user--- MINGW64 ~/Documents/repository/homework_BranchesAndConflicts (main)
+$ git push -u origin main
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 7 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (25/25), 1.96 KiB | 668.00 KiB/s, done.
+Total 25 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/DimKon3/homework_BranchesAndConflicts.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@user-?? MINGW64 ~/Documents/homework_BranchesAndConflicts (main)
+$
